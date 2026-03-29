@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talaps | Your Entire Financial World, Unified</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <img src="assets/talaps_logo.png" alt="Talaps" style="height: 36px; display: block;">
+            </a>
+
+            <div class="toggle-pill">
+                <button class="toggle-btn active" data-type="personal">Personal</button>
+                <button class="toggle-btn" data-type="business">Business</button>
+            </div>
+
+            <a href="#" class="btn btn-neon">Get Talaps</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section container">
+            <div class="hero-container">
+                <div class="hero-content reveal">
+                    <h1 class="section-title text-gradient" style="text-align: left;">YOUR ENTIRE FINANCIAL WORD,
+                        UNIFIED.</h1>
+                    <p class="hero-subtitle"
+                        style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 32px;">Experience the
+                        ultimate synergy of finance, within a single, powerful platform.</p>
+                    <div class="hero-btns" style="display: flex; align-items: center; gap: 24px;">
+                        <a href="#" class="btn btn-dark">Open Your Account</a>
+                        <a href="#" class="btn btn-inline">See what's inside <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <img src="assets/hero_vis_new.png" alt="Talaps App Mockup" class="hero-img"
+                        style="border-radius: 24px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Account Section -->
+        <section class="section white-bg">
+            <div class="container feature-grid reversed">
+                <div class="feature-visual reveal">
+                    <img src="assets/hero_phones_talaps.png" alt="Talaps Mockup" class="feature-img"
+                        style="max-height: 600px; object-fit: contain;">
+                </div>
+                <div class="feature-content reveal">
+                    <h2 class="feature-title">THE VIRTUAL ACCOUNT WITHOUT A BANK</h2>
+                    <p class="feature-desc">Open your virtual account in minutes.</p>
+                    <ul class="feature-list">
+                        <li><span class="icon">✓</span> in USD and EUR currencies</li>
+                        <li><span class="icon">✓</span> send and receive global payments</li>
+                        <li><span class="icon">✓</span> ACH and SEPA are supported (SWIFT soon)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- One Card Section -->
+        <section class="section">
+            <div class="container feature-grid">
+                <div class="feature-content reveal">
+                    <h2 class="feature-title">ONE CARD FOR ALL CASES</h2>
+                    <p class="feature-desc">Complete cost control, worldwide acceptance and your ideal everyday
+                        companion.</p>
+                    <ul class="feature-list">
+                        <li><span class="icon">✓</span> virtual and physical card</li>
+                        <li><span class="icon">✓</span> worldwide acceptance</li>
+                        <li><span class="icon">✓</span> crypto and fiat top-up</li>
+                    </ul>
+                </div>
+                <div class="feature-visual reveal">
+                    <img src="assets/virtual_card_talaps.png" alt="Talaps Card" class="feature-img"
+                        style="border-radius: 24px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Crypto Section -->
+        <section class="section crypto-section container reveal">
+            <div class="crypto-layout">
+                <div class="crypto-visual">
+                    <img src="assets/crypto_vis_talaps.png" alt="Crypto Visualization" class="feature-img"
+                        style="border-radius: 24px;">
+                </div>
+                <div class="crypto-content">
+                    <p
+                        style="text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.1em; margin-bottom: 8px; font-size: 0.9rem; font-weight: 500;">
+                        Onramps and offramps</p>
+                    <h2 class="feature-title" style="margin-bottom: 16px;">Crypto deposits & withdrawals</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Top up from multiple crypto networks or
+                        send crypto directly to any wallet. Fast, secure, and simple.</p>
+
+                    <div class="crypto-grid">
+                        <div class="network-item" data-net="arbitrum">Arbitrum</div>
+                        <div class="network-item" data-net="polygon">Polygon</div>
+                        <div class="network-item" data-net="solana">Solana</div>
+                        <div class="network-item" data-net="optimism">Optimism</div>
+                        <div class="network-item" data-net="base">Base</div>
+                        <div class="network-item" data-net="ethereum">Ethereum</div>
+                        <div class="network-item" data-net="world">World Chain</div>
+                        <div class="network-item" data-net="bnb">BNB Chain</div>
+                        <div class="network-item" data-net="mode">Mode</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section container">
+            <div class="faq-layout">
+                <div class="faq-main reveal">
+                    <h2 style="font-size: 3rem; margin-bottom: 20px;">FAQ</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 48px;">Briefly, honestly, without "small
+                        font" — these are the most frequently asked questions.</p>
+
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <button class="faq-trigger"><span>Is Talaps a physical or virtual
+                                    card?</span><span>↓</span></button>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger"><span>How fast can I start using
+                                    it?</span><span>↓</span></button>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger"><span>What can I top up with?</span><span>↓</span></button>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger"><span>Do you support worldwide
+                                    payments?</span><span>↓</span></button>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger"><span>Can I control limits and
+                                    categories?</span><span>↓</span></button>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger"><span>Is this a bank?</span><span>↓</span></button>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger"><span>How do you handle security?</span><span>↓</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-sidebar reveal">
+                    <div class="sidebar-box">
+                        <h3 style="font-size: 1.4rem;">Need a hand?</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 8px;">Reach out in a way
+                            that fits your workflow — email, community, or in-app chat.</p>
+
+                        <div class="sidebar-links">
+                            <a href="#" class="sidebar-link">✉ support@talaps.example</a>
+                            <a href="#" class="sidebar-link">💬 Community chat</a>
+                            <a href="#" class="sidebar-link">✨ Status page</a>
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">This is a demo landing. Support
+                            endpoints are placeholders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-grid-4">
+            <div class="footer-col">
+                <h4>PRODUCTS</h4>
+                <a href="#">Account</a>
+                <a href="#">Card</a>
+                <a href="#">Pricing</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4>LEGAL</h4>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Imprint</a>
+            </div>
+            <div class="footer-col">
+                <h4>APPS</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                    class="app-badge" alt="App Store">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    class="app-badge" alt="Google Play">
+            </div>
+            <div class="footer-col">
+                <h4>KEEP IN TOUCH WITH US</h4>
+                <div class="newsletter-box">
+                    <input type="text" placeholder="Email address">
+                    <button>→</button>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 16px;">
+                    <input type="checkbox" id="news" style="margin-top: 4px;">
+                    <label for="news" style="font-size: 0.7rem; color: var(--text-muted);">I would like to be informed
+                        about attractive offers and other news by <strong>Mayonto Ltd. & Co. KG</strong>. This consent
+                        can be withdrawn at any time. More information can be found in the <a href="#"
+                            style="text-decoration: underline; display: inline;">privacy policy</a>.</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="fine-print">
+            <p>© 2026 Granite Peak Global Inc. – Talaps is the trade-name of Granite Peak Global Inc.</p>
+            <p style="margin-top: 12px;">Granite Peak Global Inc. is a financial technology company, not a bank. Virtual
+                accounts, payment cards, custody, and on/off ramp services are provided by licensed partners.
+                Availability of services may vary by jurisdiction and is subject to regulatory approval.</p>
+            <p style="margin-top: 12px;">Granite Peak Global Inc. (Registration No.: D1563390) is a company incorporated
+                in Montana, USA and is registered and regulated by Financial Crimes Enforcement Network (FinCEN), as a
+                Money Service Business (MSB) under the Registration No.: 31000309483276</p>
+        </div>
+    </footer>
+</body>
+
+</html>
