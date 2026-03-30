@@ -18,15 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => observer.observe(el));
 
-    // Navbar scroll effect
     const nav = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.background = 'rgba(13, 13, 13, 0.8)';
-            nav.style.padding = '8px 20px';
+        if (window.scrollY > 40) {
+            nav.classList.add('scrolled');
         } else {
-            nav.style.background = 'rgba(255, 255, 255, 0.03)';
-            nav.style.padding = '12px 24px';
+            nav.classList.remove('scrolled');
         }
     });
 

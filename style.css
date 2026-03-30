@@ -1,9 +1,9 @@
 :root {
     /* Color Palette */
-    --neon-green: #00ffd1;
-    /* Updated to Turquoise */
-    --neon-green-dim: rgba(0, 255, 209, 0.15);
-    --neon-green-hover: #33ffda;
+    --neon-green: #00e5bc;
+    /* Updated to the new Talaps Cyan */
+    --neon-green-dim: rgba(0, 229, 188, 0.15);
+    --neon-green-hover: #00f0c6;
     --bg-dark: #0D0D0D;
     --bg-card: #141414;
     --bg-glass: rgba(255, 255, 255, 0.03);
@@ -86,7 +86,7 @@ button {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
+    background: linear-gradient(135deg, #fff 0%, #00e5bc 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -149,7 +149,7 @@ button {
 .btn-neon:hover {
     background-color: var(--neon-green-hover);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(153, 255, 0, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 229, 188, 0.4);
 }
 
 /* Animations */
@@ -434,12 +434,33 @@ button {
     transform: translateX(-50%);
     width: 90%;
     max-width: 1100px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(16px);
+    background: rgba(13, 13, 13, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border: 1px solid var(--border-glass);
-    padding: 12px 24px;
+    padding: 14px 24px;
     border-radius: 100px;
     z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.navbar.scrolled {
+    top: 12px;
+    padding: 10px 20px;
+    background: rgba(13, 13, 13, 0.85);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.logo:hover .logo-img {
+    filter: drop-shadow(0 0 8px rgba(0, 229, 188, 0.4));
 }
 
 .toggle-pill {

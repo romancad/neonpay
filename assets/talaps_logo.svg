@@ -1,0 +1,21 @@
+<svg width="180" height="48" viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .cyan { fill: #00e5bc; }
+      .brand-text { fill: #00e5bc; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em; }
+    </style>
+  </defs>
+  
+  <!-- Icon (Three Hexagons) -->
+  <g transform="translate(24, 24) scale(0.8)">
+    <!-- Top Hexagon -->
+    <path d="M0,-14 L12.12,-7 L12.12,7 L0,14 L-12.12,7 L-12.12,-7 Z" class="cyan" transform="translate(0, -11)"/>
+    <!-- Bottom Left Hexagon -->
+    <path d="M0,-14 L12.12,-7 L12.12,7 L0,14 L-12.12,7 L-12.12,-7 Z" class="cyan" transform="translate(-10.5, 8.5)"/>
+    <!-- Bottom Right Hexagon -->
+    <path d="M0,-14 L12.12,-7 L12.12,7 L0,14 L-12.12,7 L-12.12,-7 Z" class="cyan" transform="translate(10.5, 8.5)"/>
+  </g>
+
+  <!-- Text -->
+  <text x="54" y="34" class="brand-text">Talaps</text>
+</svg>
