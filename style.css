@@ -176,6 +176,13 @@ button {
     gap: 100px;
     align-items: center;
     padding: 120px 0;
+    min-height: 600px; /* Ensure content has room to center */
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .feature-grid.reversed {
@@ -227,6 +234,7 @@ button {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: center;
+    padding: 160px 0; /* Increased from default section padding */
 }
 
 .crypto-content {
@@ -429,25 +437,23 @@ button {
 /* Navbar */
 .navbar {
     position: fixed;
-    top: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1100px;
-    background: rgba(13, 13, 13, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    background: rgba(13, 13, 13, 0.9);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid var(--border-glass);
-    padding: 14px 24px;
-    border-radius: 100px;
+    border-bottom: 1px solid var(--border-glass);
+    padding: 16px 40px;
+    border-radius: 0;
     z-index: 1000;
     transition: var(--transition-smooth);
 }
 
 .navbar.scrolled {
-    top: 12px;
-    padding: 10px 20px;
-    background: rgba(13, 13, 13, 0.85);
+    padding: 10px 40px;
+    background: rgba(13, 13, 13, 0.95);
     border-color: rgba(255, 255, 255, 0.12);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
@@ -489,6 +495,25 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.nav-link:hover {
+    color: var(--neon-green);
 }
 
 .hero {
