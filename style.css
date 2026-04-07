@@ -234,7 +234,7 @@ button {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: center;
-    padding: 160px 0; /* Increased from default section padding */
+    padding: 200px 0; /* Increased for "wider in height" request */
 }
 
 .crypto-content {
@@ -496,7 +496,7 @@ button {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: var(--container-width);
+    max-width: 1400px; /* Increased from 1200px to match "width of the page" look */
     margin: 0 auto;
 }
 
