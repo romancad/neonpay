@@ -176,7 +176,7 @@ button {
     gap: 100px;
     align-items: center;
     padding: 120px 0;
-    min-height: 600px; /* Ensure content has room to center */
+    min-height: 800px; /* Increased to allow better centering */
 }
 
 .feature-content {
@@ -220,7 +220,25 @@ button {
 
 .feature-list .icon {
     color: var(--neon-green);
-    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--neon-green-dim);
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.card-info-box {
+    background: #000;
+    border: 1px solid #333;
+    padding: 24px;
+    border-radius: 12px;
+    margin-top: 32px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .feature-img {
@@ -234,7 +252,7 @@ button {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: center;
-    padding: 200px 0; /* Increased for "wider in height" request */
+    padding: 240px 0; /* Increased for "wider in height" request */
 }
 
 .crypto-content {
@@ -278,8 +296,37 @@ button {
 }
 
 /* Colors for specific networks to match icons */
-.network-item[data-net="arbitrum"]::before {
-    background: #28a0f0;
+.network-item[data-net="bitcoin"]::before {
+    background: #f7931a;
+}
+
+.network-item[data-net="xrp"]::before {
+    background: #23292f;
+}
+
+.network-item[data-net="tron"]::before {
+    background: #ff0013;
+}
+
+.network-item[data-net="usdt"]::before {
+    background: #26a17b;
+}
+
+.network-item[data-net="usdc"]::before {
+    background: #2775ca;
+}
+
+.network-badge {
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .network-item[data-net="polygon"]::before {
@@ -445,7 +492,7 @@ button {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--border-glass);
-    padding: 16px 40px;
+    padding: 16px 60px;
     border-radius: 0;
     z-index: 1000;
     transition: var(--transition-smooth);
@@ -496,7 +543,6 @@ button {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1400px; /* Increased from 1200px to match "width of the page" look */
     margin: 0 auto;
 }
 
