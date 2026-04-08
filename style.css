@@ -18,7 +18,7 @@
 
     /* Spacing */
     --container-width: 1200px;
-    --section-padding: 120px 20px;
+    --section-padding: 160px;
     --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -72,6 +72,11 @@ button {
 }
 
 /* Utilities */
+.section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -175,7 +180,7 @@ button {
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     align-items: center;
-    padding: 120px 0;
+    padding: 0;
     min-height: 800px; /* Increased to allow better centering */
 }
 
@@ -252,7 +257,7 @@ button {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: center;
-    padding: 240px 0; /* Increased for "wider in height" request */
+    padding: 0; /* Standardized via .section */
 }
 
 .crypto-content {
@@ -363,7 +368,7 @@ button {
 
 /* FAQ Section */
 .faq-section {
-    padding: 120px 0;
+    padding: 0; /* Standardized via .section */
 }
 
 .faq-layout {
@@ -564,6 +569,7 @@ button {
 
 .hero {
     padding-top: 200px;
+    padding-bottom: 160px;
     text-align: left;
 }
 
@@ -607,7 +613,7 @@ button {
 
 @media (max-width: 768px) {
     :root {
-        --section-padding: 80px 20px;
+        --section-padding: 80px;
     }
 
     .navbar {
@@ -670,7 +676,7 @@ button {
 
 @media (max-width: 480px) {
     :root {
-        --section-padding: 60px 20px;
+        --section-padding: 60px;
     }
 
     .navbar {
