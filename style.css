@@ -18,7 +18,7 @@
 
     /* Spacing */
     --container-width: 1200px;
-    --section-padding: 60px;
+    --section-padding: 40px;
     --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -179,7 +179,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
 }
 
@@ -247,6 +247,8 @@ button {
 
 .feature-img {
     width: 100%;
+    max-height: 600px;
+    object-fit: contain;
     border-radius: 32px;
 }
 
@@ -255,7 +257,7 @@ button {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
-    align-items: center;
+    align-items: flex-start;
     padding: 0; /* Standardized via .section */
 }
 
@@ -578,7 +580,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 40px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .hero-img {
