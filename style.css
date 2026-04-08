@@ -367,9 +367,7 @@ button {
 }
 
 /* FAQ Section */
-.faq-section {
-    padding: 0; /* Standardized via .section */
-}
+
 
 .faq-layout {
     display: grid;
@@ -421,7 +419,7 @@ button {
 /* Footer Section */
 .footer {
     border-top: 1px solid var(--border-glass);
-    padding: 80px 0 40px;
+    padding: var(--section-padding) 0 40px;
 }
 
 .footer-grid-4 {
@@ -569,7 +567,7 @@ button {
 
 .hero {
     padding-top: 200px;
-    padding-bottom: 160px;
+    padding-bottom: var(--section-padding);
     text-align: left;
 }
 
