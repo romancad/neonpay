@@ -18,7 +18,7 @@
 
     /* Spacing */
     --container-width: 1200px;
-    --section-padding: 100px;
+    --section-padding: 60px;
     --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -565,7 +565,7 @@ button {
 }
 
 .hero {
-    padding-top: 160px;
+    padding-top: 140px;
     padding-bottom: var(--section-padding);
     text-align: left;
 }
