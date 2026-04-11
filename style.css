@@ -87,7 +87,7 @@ button {
     font-size: clamp(2.5rem, 6vw, 4rem);
     text-align: center;
     margin-bottom: 60px;
-    line-height: 1;
+    line-height: 1.15;
 }
 
 .text-gradient {
@@ -195,7 +195,7 @@ button {
 
 .feature-title {
     font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.1;
+    line-height: 1.25;
     margin-bottom: 24px;
     text-transform: uppercase;
 }
