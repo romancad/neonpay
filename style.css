@@ -293,32 +293,41 @@ button {
 
 .network-item::before {
     content: "";
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 50%;
-    background: var(--text-muted);
-    /* Placeholder for icons */
 }
 
-/* Colors for specific networks to match icons */
+/* Logos for specific networks */
 .network-item[data-net="bitcoin"]::before {
-    background: #f7931a;
+    background-image: url('https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=025');
+}
+
+.network-item[data-net="ethereum"]::before {
+    background-image: url('https://cryptologos.cc/logos/ethereum-eth-logo.png?v=025');
+}
+
+.network-item[data-net="solana"]::before {
+    background-image: url('https://cryptologos.cc/logos/solana-sol-logo.png?v=025');
 }
 
 .network-item[data-net="xrp"]::before {
-    background: #23292f;
+    background-image: url('https://cryptologos.cc/logos/xrp-xrp-logo.png?v=025');
 }
 
 .network-item[data-net="tron"]::before {
-    background: #ff0013;
+    background-image: url('https://cryptologos.cc/logos/tron-trx-logo.png?v=025');
 }
 
 .network-item[data-net="usdt"]::before {
-    background: #26a17b;
+    background-image: url('https://cryptologos.cc/logos/tether-usdt-logo.png?v=025');
 }
 
 .network-item[data-net="usdc"]::before {
-    background: #2775ca;
+    background-image: url('https://cryptologos.cc/logos/usd-coin-usdc-logo.png?v=025');
 }
 
 .network-badge {
