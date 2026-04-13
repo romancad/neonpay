@@ -322,16 +322,16 @@ button {
 }
 
 .network-badge {
-    padding: 8px 16px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #333;
+    padding: 10px 20px;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .network-item[data-net="polygon"]::before {
