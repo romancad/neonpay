@@ -1,0 +1,20 @@
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .brand-text {
+        fill: #2cded1;
+        font-family: 'Outfit', sans-serif;
+        font-size: 36px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+    </style>
+  </defs>
+  <g transform="translate(30 30)">
+    <path d="M0,-14 L12.12,-7 L12.12,7 L0,14 L-12.12,7 L-12.12,-7 Z" fill="#2cded1" transform="translate(0,-11)"/>
+    <path d="M0,-14 L12.12,-7 L12.12,7 L0,14 L-12.12,7 L-12.12,-7 Z" fill="#2cded1" transform="translate(-10.5,8.5)"/>
+    <path d="M0,-14 L12.12,-7 L12.12,7 L0,14 L-12.12,7 L-12.12,-7 Z" fill="#2cded1" transform="translate(10.5,8.5)"/>
+    <path d="M0,0 L0,-5 M0,0 L4.33,2.5 M0,0 L-4.33,2.5" stroke="#ffffff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="68" y="40" class="brand-text">Talaps</text>
+</svg>

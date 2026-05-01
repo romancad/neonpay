@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talaps Products | Individual Product Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo" aria-label="Talaps home">
+                <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img">
+            </a>
+
+            <div class="segment-menu" data-segment-menu>
+                <div class="toggle-pill" aria-label="Product type">
+                    <button type="button" class="toggle-btn active" data-type="personal" data-segment-panel="personal">Personal</button>
+                    <button type="button" class="toggle-btn" data-type="business" data-segment-panel="business">Business</button>
+                </div>
+
+                <div class="segment-submenu active" data-segment-submenu="personal" aria-label="Personal product categories">
+                    <a href="accounts.html" class="submenu-link">Accounts</a>
+                    <a href="cards.html" class="submenu-link">Cards</a>
+                    <a href="crypto.html" class="submenu-link">Crypto</a>
+                </div>
+
+                <div class="segment-submenu" data-segment-submenu="business" aria-label="Business product categories">
+                    <a href="business.html#business-accounts" class="submenu-link">Accounts</a>
+                    <a href="business.html#business-cards" class="submenu-link">Cards</a>
+                    <a href="business.html#business-crypto" class="submenu-link">Crypto</a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#" class="nav-link">Log in</a>
+                <a href="#" class="btn btn-primary">Get Talaps</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="products-main">
+        <section class="hero section">
+            <div class="container hero-container">
+                <div class="hero-copy reveal">
+                    <h1 class="section-title text-gradient hero-title">
+                        <span class="hero-title-line">Each product, clearly</span>
+                        <span class="hero-title-line">explained.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        This subpage shows each Talaps product separately, so visitors can quickly understand what it
+                        does and where it fits.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="index.html" class="btn btn-primary">Back to Home</a>
+                    </div>
+                    <p class="products-hero-note">Scroll to compare account, card, crypto, and unified dashboard
+                        capabilities.</p>
+                </div>
+
+                <div class="hero-visual reveal" data-reveal="right">
+                    <div class="media-shell media-shell-hero">
+                        <img src="assets/talaps11_nowm.png" alt="Talaps app overview" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container product-grid">
+                <article class="product-card reveal" id="virtual-account-product">
+                    <div class="media-shell media-shell-light">
+                        <img src="assets/virtual_account_talaps.png" alt="Virtual account overview" class="feature-img">
+                    </div>
+                    <h2 class="product-title">Virtual Account</h2>
+                    <p class="product-desc">Receive and send money with local rails in multiple regions from one place.
+                    </p>
+                    <ul class="product-list">
+                        <li>USD (ACH and Wire), EUR (SEPA), GBP, MXN, and BRL support</li>
+                        <li>Fast onboarding and simple account setup flow</li>
+                        <li>Built for global transfers and day-to-day operations</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="accounts.html" class="btn btn-secondary">Open Accounts Page</a>
+                    </div>
+                </article>
+
+                <article class="product-card reveal" id="card-product">
+                    <div class="media-shell media-shell-stack">
+                        <img src="assets/talaps3_nowm.png" alt="Talaps Visa card experience" class="stack-showcase">
+                    </div>
+                    <h2 class="product-title">Visa Card Experience</h2>
+                    <p class="product-desc">Use a virtual and physical card with clear controls and global acceptance.
+                    </p>
+                    <ul class="product-list">
+                        <li>Single card flow for online and in-person payments</li>
+                        <li>Spend from your account balance with predictable visibility</li>
+                        <li>Designed for international daily use</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="cards.html" class="btn btn-secondary">Open Card Page</a>
+                    </div>
+                </article>
+
+                <article class="product-card reveal" id="crypto-product">
+                    <div class="media-shell media-shell-crypto">
+                        <img src="assets/landing_crypto_clean.png" alt="Talaps crypto deposit and withdrawal view"
+                            class="feature-img">
+                    </div>
+                    <h2 class="product-title">Crypto Deposits and Withdrawals</h2>
+                    <p class="product-desc">Move funds through major crypto networks with a simple, wallet-ready flow.
+                    </p>
+                    <ul class="product-list">
+                        <li>Bitcoin, Ethereum, Solana, XRP, Tron, USDT, and USDC</li>
+                        <li>Top up balances or withdraw directly to external wallets</li>
+                        <li>Unified with the same account and card experience</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="crypto.html" class="btn btn-secondary">Open Crypto Page</a>
+                    </div>
+                </article>
+
+                <article class="product-card reveal" id="dashboard-product">
+                    <div class="media-shell media-shell-hero">
+                        <img src="assets/talaps11_hero.png" alt="Talaps unified dashboard" class="hero-img">
+                    </div>
+                    <h2 class="product-title">Unified Dashboard</h2>
+                    <p class="product-desc">Track balances, activity, and transfer performance inside a single product
+                        interface.</p>
+                    <ul class="product-list">
+                        <li>Multi-currency visibility on one screen</li>
+                        <li>Card and account activity shown together</li>
+                        <li>Built to keep product operations transparent</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="index.html" class="btn btn-secondary">Back to Main Site</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

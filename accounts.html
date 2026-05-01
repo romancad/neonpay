@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talaps Accounts | Virtual Account In Local Currency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body class="accounts-page-body">
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo" aria-label="Talaps home">
+                <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img">
+            </a>
+
+            <div class="segment-menu" data-segment-menu>
+                <div class="toggle-pill" aria-label="Product type">
+                    <button type="button" class="toggle-btn active" data-type="personal" data-segment-panel="personal">Personal</button>
+                    <button type="button" class="toggle-btn" data-type="business" data-segment-panel="business">Business</button>
+                </div>
+
+                <div class="segment-submenu active" data-segment-submenu="personal" aria-label="Personal product categories">
+                    <a href="accounts.html" class="submenu-link active">Accounts</a>
+                    <a href="cards.html" class="submenu-link">Cards</a>
+                    <a href="crypto.html" class="submenu-link">Crypto</a>
+                </div>
+
+                <div class="segment-submenu" data-segment-submenu="business" aria-label="Business product categories">
+                    <a href="business.html#business-accounts" class="submenu-link">Accounts</a>
+                    <a href="business.html#business-cards" class="submenu-link">Cards</a>
+                    <a href="business.html#business-crypto" class="submenu-link">Crypto</a>
+                </div>
+            </div>
+
+            <div class="nav-auth" aria-label="Account access">
+                <button type="button" class="btn btn-secondary nav-auth-btn" data-auth-open="login">Log in</button>
+                <button type="button" class="btn btn-primary nav-auth-btn nav-auth-btn-primary"
+                    data-auth-open="register">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-modal" data-auth-modal hidden>
+        <div class="auth-modal-backdrop" data-auth-close></div>
+        <div class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+            <button type="button" class="auth-close" data-auth-close aria-label="Close account dialog">&times;</button>
+
+            <div class="auth-brand-row">
+                <span class="auth-brand-mark" aria-hidden="true">
+                    <img src="assets/talaps_mark.svg" alt="" class="auth-brand-mark-img">
+                </span>
+                <div class="auth-brand-copy">
+                    <h2 id="auth-title" data-auth-title>Welcome back to Talaps</h2>
+                    <p class="auth-brand-text" data-auth-subtitle>Sign in to your account</p>
+                </div>
+            </div>
+
+            <form class="auth-form" data-auth-form novalidate>
+                <label class="auth-field" data-auth-name-field hidden>
+                    <span>Full name</span>
+                    <input type="text" name="full_name" placeholder="Your name" autocomplete="name">
+                </label>
+
+                <label class="auth-field">
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="Email" autocomplete="email">
+                </label>
+
+                <label class="auth-field">
+                    <span>Password</span>
+                    <input type="password" name="password" placeholder="Password" autocomplete="current-password">
+                </label>
+
+                <label class="auth-field" data-auth-confirm-field hidden>
+                    <span>Confirm password</span>
+                    <input type="password" name="confirm_password" placeholder="Confirm password"
+                        autocomplete="new-password">
+                </label>
+
+                <button type="submit" class="auth-submit" data-auth-submit>Continue</button>
+            </form>
+
+            <div class="auth-meta" data-auth-login-meta>
+                <a href="#" class="auth-link">Forgot password?</a>
+            </div>
+
+            <p class="auth-switch-row" data-auth-login-switch>
+                Don't have an account?
+                <button type="button" class="auth-switch-link" data-auth-switch="register">Register</button>
+            </p>
+
+            <p class="auth-switch-row" data-auth-register-switch hidden>
+                Already have an account?
+                <button type="button" class="auth-switch-link" data-auth-switch="login">Log in</button>
+            </p>
+        </div>
+    </div>
+
+    <main class="accounts-page-main">
+        <section class="accounts-hero">
+            <div class="accounts-shell accounts-hero-grid">
+                <div class="accounts-hero-copy reveal">
+                    <h1 class="accounts-hero-title">VIRTUAL ACCOUNT<br>IN LOCAL CURRENCY</h1>
+                    <p class="accounts-hero-subtitle">The easiest way to receive and send money in your local currency.</p>
+                    <button type="button" class="btn btn-primary accounts-hero-cta" data-auth-open="register">Open Your Account</button>
+                </div>
+
+                <div class="accounts-hero-visual reveal" data-reveal="right">
+                    <img src="assets/talaps500.jpg" alt="Talaps dashboard shown on laptop and phone"
+                        class="accounts-hero-composite">
+                </div>
+            </div>
+        </section>
+
+        <section class="accounts-features-section">
+            <div class="accounts-shell">
+                <div class="accounts-section-head reveal">
+                    <h2>KEY FEATURES</h2>
+                    <p>Unlock global financial freedom with our high-performance virtual accounts.</p>
+                </div>
+
+                <div class="accounts-feature-grid">
+                    <article class="accounts-feature-card reveal">
+                        <div class="accounts-feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" role="presentation">
+                                <path d="M10 24h44M14 24V18l18-8 18 8v6M18 28v18M30 28v18M46 28v18M12 50h40M8 54h48" />
+                            </svg>
+                        </div>
+                        <h3>Local Virtual Accounts</h3>
+                        <p>Open virtual accounts in major currencies USD, EUR, GBP and other local currencies.</p>
+                        <p>Send and receive payments and manage your funds.</p>
+                    </article>
+
+                    <article class="accounts-feature-card reveal">
+                        <div class="accounts-feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" role="presentation">
+                                <path d="M32 12a18 18 0 0 1 18 18v6h-8v-6a10 10 0 0 0-20 0v6h-8v-6a18 18 0 0 1 18-18Z" />
+                                <rect x="16" y="34" width="32" height="20" rx="6" ry="6" />
+                                <path d="M32 40v8M26 46h12" />
+                                <path d="M12 24c4-6 10-10 20-12M52 24c-4-6-10-10-20-12" />
+                            </svg>
+                        </div>
+                        <h3>Maximum Security</h3>
+                        <p>We safeguard your virtual accounts.</p>
+                        <p>With bank-level security, utilizing two-factor authentication and proactive fraud monitoring to keep your assets safe.</p>
+                    </article>
+
+                    <article class="accounts-feature-card reveal">
+                        <div class="accounts-feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" role="presentation">
+                                <path d="M18 46h28a8 8 0 0 0 8-8V24a14 14 0 0 0-28 0v14a8 8 0 0 0 8 8Z" />
+                                <path d="M24 50a8 8 0 0 0 16 0" />
+                                <path d="M42 16a10 10 0 0 1 10 10v4" />
+                                <circle cx="48" cy="18" r="7" />
+                                <path d="M48 15v6M45 18h6" />
+                            </svg>
+                        </div>
+                        <h3>Real-time Notifications</h3>
+                        <p>Stay updated with real-time notifications the moment funds hit your account.</p>
+                        <p>Track all transactions with detailed reporting and analytics.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="accounts-apply-section">
+            <div class="accounts-shell accounts-apply-grid">
+                <div class="accounts-apply-visual reveal" data-reveal="left">
+                    <div class="accounts-apply-frame">
+                        <img src="assets/talaps501.jpg" alt="Talaps virtual account interface with country flags"
+                            class="accounts-apply-image">
+                    </div>
+                </div>
+
+                <div class="accounts-apply-copy reveal">
+                    <h2>APPLY FOR YOUR<br>VIRTUAL ACCOUNT.</h2>
+
+                    <ol class="accounts-step-list">
+                        <li><span class="accounts-step-number">1</span><span>Sign Up</span></li>
+                        <li><span class="accounts-step-number">2</span><span>Perform KYC</span></li>
+                        <li><span class="accounts-step-number">3</span><span>Activate Virtual Account</span></li>
+                    </ol>
+
+                    <button type="button" class="btn btn-primary accounts-apply-cta" data-auth-open="register">Open Your Account</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="accounts-note-section">
+            <div class="accounts-shell">
+                <div class="accounts-note-banner reveal">
+                    <p>Every deposit - fiat or crypto - is instantly swapped 1:1 for USDC.</p>
+                    <p>We turn your assets into a stable, inflation-resistant balance you can count on.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="accounts-faq-section">
+            <div class="accounts-shell accounts-faq-shell reveal">
+                <h2 class="accounts-faq-title">FAQ</h2>
+                <p class="accounts-faq-intro">Get answers to common questions about our virtual account solutions</p>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>What kind of accounts do I get?</span>
+                            <span class="faq-symbol" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Talaps virtual accounts are built for local-currency receiving, global payments, and smooth balance management in one place.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>Are there any setup or monthly fees?</span>
+                            <span class="faq-symbol" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Pricing depends on your selected plan and region, with the full breakdown shown before you complete onboarding.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>How fast will I receive my payments?</span>
+                            <span class="faq-symbol" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Transfer speed depends on the corridor and rail used, but the product is designed for fast visibility once funds arrive.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>Who provides and regulates these accounts?</span>
+                            <span class="faq-symbol" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Talaps works with regulated partners and licensed infrastructure where required for account issuance and payment rails.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer accounts-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img footer-logo">
+                </a>
+                <p>Virtual account flows, local rails, and spending tools refined into one polished Talaps experience.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="accounts.html">Wallets</a>
+                <a href="cards.html">Cards</a>
+                <a href="crypto.html">Crypto</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#" data-auth-open="login">Log in</a>
+                <a href="#">Support</a>
+                <a href="#">Privacy</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="#">On-ramp</a>
+                <a href="#">Off-ramp</a>
+                <a href="#">Wallet exchange</a>
+            </div>
+        </div>
+
+        <div class="container fine-print">
+            <p>&copy; 2026 Talaps. Product visuals shown for presentation purposes.</p>
+            <p>Availability varies by jurisdiction and remains subject to regulatory approval and partner support.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

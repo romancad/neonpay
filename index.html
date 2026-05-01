@@ -7,7 +7,8 @@
     <title>Talaps | Your Entire Financial World, Unified</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
@@ -16,223 +17,375 @@
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <a href="#" class="logo">
-                <img src="assets/talaps_logo.svg" alt="Talaps Logo" class="logo-img">
+            <a href="index.html" class="logo" aria-label="Talaps home">
+                <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img">
             </a>
 
-            <div class="toggle-pill">
-                <button class="toggle-btn active" data-type="personal">Personal</button>
-                <button class="toggle-btn" data-type="business">Business</button>
+            <div class="segment-menu" data-segment-menu>
+                <div class="toggle-pill" aria-label="Product type">
+                    <button type="button" class="toggle-btn active" data-type="personal" data-segment-panel="personal">Personal</button>
+                    <button type="button" class="toggle-btn" data-type="business" data-segment-panel="business">Business</button>
+                </div>
+
+                <div class="segment-submenu active" data-segment-submenu="personal" aria-label="Personal product categories">
+                    <a href="accounts.html" class="submenu-link">Accounts</a>
+                    <a href="cards.html" class="submenu-link">Cards</a>
+                    <a href="crypto.html" class="submenu-link">Crypto</a>
+                </div>
+
+                <div class="segment-submenu" data-segment-submenu="business" aria-label="Business product categories">
+                    <a href="business.html#business-accounts" class="submenu-link">Accounts</a>
+                    <a href="business.html#business-cards" class="submenu-link">Cards</a>
+                    <a href="business.html#business-crypto" class="submenu-link">Crypto</a>
+                </div>
             </div>
 
             <div class="nav-actions">
                 <a href="#" class="nav-link">Log in</a>
-                <a href="#" class="btn btn-neon">Get Talaps</a>
+                <a href="#" class="btn btn-primary">Get Talaps</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero section">
-            <div class="hero-container">
-                <div class="hero-content reveal">
-                    <h1 class="section-title text-gradient" style="text-align: left;">YOUR ENTIRE FINANCIAL WORLD,
-                        UNIFIED.</h1>
-                    <p class="hero-subtitle"
-                        style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 32px;">Experience the
-                        ultimate synergy of finance, within a single, powerful platform.</p>
-                    <div class="hero-btns" style="display: flex; align-items: center; gap: 24px;">
-                        <a href="#" class="btn btn-dark">Open Your Account</a>
+            <div class="container hero-container">
+                <div class="hero-copy reveal">
+                    <h1 class="section-title text-gradient hero-title">
+                        <span class="hero-title-line">Your entire financial</span>
+                        <span class="hero-title-line">world, unified.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Experience the ultimate synergy of finance, cards, global accounts, and crypto in one refined
+                        platform.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Open Your Account</a>
                     </div>
                 </div>
-                <div class="hero-visual reveal">
-                    <img src="assets/talaps_v3_hero.png" alt="Talaps Finance Dashboard" class="hero-img"
-                        style="border-radius: 24px; width: 100%; height: auto; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+
+                <div class="hero-visual reveal" data-reveal="right">
+                    <div class="media-shell media-shell-hero hero-cutout-shell parallax-media">
+                        <img src="assets/talaps123_cutout.png" alt="Talaps cards preview" class="hero-img hero-cutout-img">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Virtual Account Section -->
-        <section class="section white-bg">
+        <section class="section white-bg" id="virtual-account">
             <div class="container feature-grid reversed">
-                <div class="feature-visual reveal">
-                    <img src="assets/talaps_v3_virtual_account.jpg" alt="Talaps Mobile App" class="feature-img"
-                        style="max-height: 600px; border-radius: 24px; object-fit: contain;">
+                <div class="feature-visual reveal" data-reveal="left">
+                    <div class="media-shell media-shell-light parallax-media">
+                        <img src="assets/virtual_account_talaps.png" alt="Talaps account views on mobile"
+                            class="feature-img">
+                    </div>
                 </div>
+
                 <div class="feature-content reveal">
-                    <h2 class="feature-title">THE VIRTUAL ACCOUNT WITHOUT A BANK</h2>
+                    <h2 class="feature-title">The virtual account without a bank</h2>
                     <p class="feature-desc">Open your virtual account in minutes.</p>
-                    <p style="margin-bottom: 24px;">Send and receive money globally with the ease of a local—across the US, Europe and Latin America.</p>
-                    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
-                        <div class="network-badge">🇺🇸 USD (ACH & Wire)</div>
-                        <div class="network-badge">🇪🇺 EUR (SEPA)</div>
-                        <div class="network-badge">🇬🇧 GBP (FSP)</div>
-                        <div class="network-badge">🇲🇽 MXN (SPEI)</div>
-                        <div class="network-badge">🇧🇷 BRL (PIX)</div>
+                    <p class="feature-copy">
+                        Send and receive money globally with the ease of a local account across the US, Europe, and
+                        Latin America.
+                    </p>
+
+                    <div class="badge-grid" aria-label="Supported account rails">
+                        <div class="network-badge"><span class="flag-circle flag-us" aria-hidden="true"></span><span>USD
+                                (ACH &amp; Wire)</span></div>
+                        <div class="network-badge"><span class="flag-circle flag-eu" aria-hidden="true"></span><span>EUR
+                                (SEPA)</span></div>
+                        <div class="network-badge"><span class="flag-circle flag-gb" aria-hidden="true"></span><span>GBP
+                                (FSP)</span></div>
+                        <div class="network-badge"><span class="flag-circle flag-mx" aria-hidden="true"></span><span>MXN
+                                (SPEI)</span></div>
+                        <div class="network-badge"><span class="flag-circle flag-br" aria-hidden="true"></span><span>BRL
+                                (PIX)</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- One Card Section -->
-        <section class="section">
+        <section class="section" id="one-card">
             <div class="container feature-grid">
                 <div class="feature-content reveal">
-                    <h2 class="feature-title">ONE CARD FOR ALL CASES</h2>
-                    <p class="feature-desc">Complete cost control, worldwide acceptance and your ideal everyday
-                        companion.</p>
+                    <h2 class="feature-title">One card for all cases</h2>
+                    <p class="feature-desc">Complete cost control, worldwide acceptance, and a card experience built
+                        for daily spending.</p>
+
                     <ul class="feature-list">
-                        <li><span class="icon">✓</span> virtual and physical card</li>
-                        <li><span class="icon">✓</span> worldwide acceptance</li>
-                        <li><span class="icon">✓</span> crypto and fiat top-up</li>
+                        <li><span class="list-icon" aria-hidden="true">&#10003;</span><span>Virtual and physical card</span>
+                        </li>
+                        <li><span class="list-icon" aria-hidden="true">&#10003;</span><span>Worldwide acceptance</span></li>
+                        <li><span class="list-icon" aria-hidden="true">&#10003;</span><span>Crypto and fiat top-up</span></li>
                     </ul>
-                    <div class="card-info-box">
-                        Use your virtual or physical VISA card to spend your crypto and global earnings effortlessly in 150M+ merchants worldwide.
-                    </div>
-                </div>
-                <div class="feature-visual reveal">
-                    <img src="assets/talaps_v3_one_card.jpg" alt="Talaps Premium Card" class="feature-img"
-                        style="border-radius: 24px; box-shadow: 0 10px 30px rgba(0,255,255,0.1);">
-                </div>
-            </div>
-        </section>
 
-        <!-- Crypto Section -->
-        <section class="section crypto-section reveal">
-            <div class="crypto-layout container">
-                <div class="crypto-visual">
-                    <img src="assets/talaps_v3_crypto.png" alt="Global Crypto Network" class="feature-img"
-                        style="border-radius: 24px; opacity: 1;">
+                    <p class="card-note">
+                        Use your virtual or physical Visa card to spend your crypto and global earnings smoothly across
+                        everyday merchants worldwide.
+                    </p>
                 </div>
-                <div class="crypto-content">
-                    <p
-                        style="text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.1em; margin-bottom: 8px; font-size: 0.9rem; font-weight: 500;">
-                        Onramps and offramps</p>
-                    <h2 class="feature-title" style="margin-bottom: 16px;">Crypto deposits & withdrawals</h2>
-                    <p style="color: var(--text-secondary); line-height: 1.6;">Top up from multiple crypto networks or
-                        send crypto directly to any wallet. Fast, secure, and simple.</p>
-                    <div class="crypto-grid">
-                        <div class="network-item" data-net="bitcoin">Bitcoin</div>
-                        <div class="network-item" data-net="ethereum">Ethereum</div>
-                        <div class="network-item" data-net="solana">Solana</div>
-                        <div class="network-item" data-net="xrp">XRP</div>
-                        <div class="network-item" data-net="tron">Tron</div>
-                        <div class="network-item" data-net="usdt">USDT</div>
-                        <div class="network-item" data-net="usdc">USDC</div>
+
+                <div class="feature-visual reveal" data-reveal="right">
+                    <div class="media-shell media-shell-stack parallax-media">
+                        <img src="assets/talaps3_nowm.png" alt="Talaps virtual Visa card in the app"
+                            class="stack-showcase">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
+        <section class="partner-marquee-section" aria-label="Talaps payment and compliance partners">
+            <div class="partner-marquee-shell">
+                <div class="partner-marquee-window">
+                    <div class="partner-marquee-track">
+                        <div class="partner-marquee-set">
+                            <div class="partner-mark" aria-label="persona">
+                                <img src="assets/partner-persona.svg" alt="persona" class="partner-mark-wordmark partner-mark-persona">
+                            </div>
+                            <div class="partner-mark" aria-label="Visa">
+                                <img src="assets/partner-visa.svg" alt="Visa" class="partner-mark-wordmark partner-mark-visa">
+                            </div>
+                            <div class="partner-mark" aria-label="Bridge">
+                                <img src="assets/partner-bridge.svg" alt="Bridge" class="partner-mark-wordmark partner-mark-bridge">
+                            </div>
+                            <div class="partner-mark partner-mark-apple" aria-label="Apple Pay">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt=""
+                                    class="partner-mark-svg partner-mark-apple-icon" aria-hidden="true">
+                                <span>Pay</span>
+                            </div>
+                            <div class="partner-mark" aria-label="Google Pay">
+                                <img src="assets/partner-googlepay.svg" alt="Google Pay" class="partner-mark-wordmark partner-mark-gpay">
+                            </div>
+                            <div class="partner-mark" aria-label="persona">
+                                <img src="assets/partner-persona.svg" alt="persona" class="partner-mark-wordmark partner-mark-persona">
+                            </div>
+                            <div class="partner-mark" aria-label="Visa">
+                                <img src="assets/partner-visa.svg" alt="Visa" class="partner-mark-wordmark partner-mark-visa">
+                            </div>
+                            <div class="partner-mark" aria-label="Bridge">
+                                <img src="assets/partner-bridge.svg" alt="Bridge" class="partner-mark-wordmark partner-mark-bridge">
+                            </div>
+                            <div class="partner-mark partner-mark-apple" aria-label="Apple Pay">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt=""
+                                    class="partner-mark-svg partner-mark-apple-icon" aria-hidden="true">
+                                <span>Pay</span>
+                            </div>
+                            <div class="partner-mark" aria-label="Google Pay">
+                                <img src="assets/partner-googlepay.svg" alt="Google Pay" class="partner-mark-wordmark partner-mark-gpay">
+                            </div>
+                        </div>
+
+                        <div class="partner-marquee-set" aria-hidden="true">
+                            <div class="partner-mark">
+                                <img src="assets/partner-persona.svg" alt="" class="partner-mark-wordmark partner-mark-persona">
+                            </div>
+                            <div class="partner-mark">
+                                <img src="assets/partner-visa.svg" alt="" class="partner-mark-wordmark partner-mark-visa">
+                            </div>
+                            <div class="partner-mark">
+                                <img src="assets/partner-bridge.svg" alt="" class="partner-mark-wordmark partner-mark-bridge">
+                            </div>
+                            <div class="partner-mark partner-mark-apple">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt=""
+                                    class="partner-mark-svg partner-mark-apple-icon" aria-hidden="true">
+                                <span>Pay</span>
+                            </div>
+                            <div class="partner-mark">
+                                <img src="assets/partner-googlepay.svg" alt="" class="partner-mark-wordmark partner-mark-gpay">
+                            </div>
+                            <div class="partner-mark">
+                                <img src="assets/partner-persona.svg" alt="" class="partner-mark-wordmark partner-mark-persona">
+                            </div>
+                            <div class="partner-mark">
+                                <img src="assets/partner-visa.svg" alt="" class="partner-mark-wordmark partner-mark-visa">
+                            </div>
+                            <div class="partner-mark">
+                                <img src="assets/partner-bridge.svg" alt="" class="partner-mark-wordmark partner-mark-bridge">
+                            </div>
+                            <div class="partner-mark partner-mark-apple">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt=""
+                                    class="partner-mark-svg partner-mark-apple-icon" aria-hidden="true">
+                                <span>Pay</span>
+                            </div>
+                            <div class="partner-mark">
+                                <img src="assets/partner-googlepay.svg" alt="" class="partner-mark-wordmark partner-mark-gpay">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section crypto-section" id="crypto">
+            <div class="container crypto-layout">
+                <div class="crypto-visual reveal" data-reveal="left">
+                    <div class="media-shell media-shell-crypto parallax-media">
+                        <img src="assets/landing_crypto_clean.png" alt="Talaps crypto activity view"
+                            class="feature-img">
+                    </div>
+                </div>
+
+                <div class="crypto-content reveal">
+                    <div class="rail-panel active rail-panel-static">
+                        <p class="crypto-kicker">Onramps and offramps</p>
+                        <h2 class="feature-title rail-title crypto-deposits-title">Crypto deposits &amp; withdrawals</h2>
+                        <p class="feature-copy rail-copy">
+                            Top up from multiple crypto networks or send directly to any wallet. Fast, secure, and built
+                            for global movement.
+                        </p>
+                        <div class="crypto-grid" aria-label="Supported crypto networks">
+                            <div class="network-item"><span class="network-logo token-arb" aria-hidden="true"></span><span>Arbitrum</span></div>
+                            <div class="network-item"><span class="network-logo token-polygon" aria-hidden="true"></span><span>Polygon</span></div>
+                            <div class="network-item"><span class="network-logo token-solana" aria-hidden="true"></span><span>Solana</span></div>
+                            <div class="network-item"><span class="network-logo token-optimism" aria-hidden="true"></span><span>Optimism</span></div>
+                            <div class="network-item"><span class="network-logo token-base" aria-hidden="true"></span><span>Base</span></div>
+                            <div class="network-item"><span class="network-logo token-ethereum" aria-hidden="true"></span><span>Ethereum</span></div>
+                            <div class="network-item"><span class="network-logo token-world" aria-hidden="true"></span><span>World Chain</span></div>
+                            <div class="network-item"><span class="network-logo token-bnb" aria-hidden="true"></span><span>BNB Chain</span></div>
+                            <div class="network-item"><span class="network-logo token-mode" aria-hidden="true"></span><span>Mode</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section faq-section">
-            <div class="faq-layout container">
+            <div class="container faq-layout">
                 <div class="faq-main reveal">
-                    <h2 style="font-size: 3rem; margin-bottom: 20px;">FAQ</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 48px;">Briefly, honestly, without "small
-                        font" — these are the most frequently asked questions.</p>
+                    <h2 class="faq-title">FAQ</h2>
+                    <p class="faq-intro">Brief, honest answers to the questions people ask most before getting started.
+                    </p>
 
                     <div class="faq-container">
-                        <div class="faq-item">
-                            <button class="faq-trigger"><span>Is Talaps a physical or virtual
-                                    card?</span><span>↓</span></button>
+                        <div class="faq-item active">
+                            <button class="faq-trigger" aria-expanded="true">
+                                <span>Is Talaps a physical or virtual card?</span>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>You can start with a virtual card in-app and move to a physical card when you
+                                        want the same controls in your wallet.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger"><span>How fast can I start using
-                                    it?</span><span>↓</span></button>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger"><span>What can I top up with?</span><span>↓</span></button>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger"><span>Do you support worldwide
-                                    payments?</span><span>↓</span></button>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger"><span>Can I control limits and
-                                    categories?</span><span>↓</span></button>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger"><span>Is this a bank?</span><span>↓</span></button>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger"><span>How do you handle security?</span><span>↓</span></button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="faq-sidebar reveal">
-                    <div class="sidebar-box">
-                        <h3 style="font-size: 1.4rem;">Need a hand?</h3>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 8px;">Reach out in a way
-                            that fits your workflow — email, community, or in-app chat.</p>
-
-                        <div class="sidebar-links">
-                            <a href="#" class="sidebar-link">✉ support@talaps.example</a>
-                            <a href="#" class="sidebar-link">💬 Community chat</a>
-                            <a href="#" class="sidebar-link">✨ Status page</a>
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span>How fast can I start using it?</span>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Account setup is designed to be quick. Once onboarding is complete, you can move
+                                        funds, issue a card, and start spending without delay.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p style="font-size: 0.75rem; color: var(--text-muted);">This is a demo landing. Support
-                            endpoints are placeholders.</p>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span>What can I top up with?</span>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Talaps supports both fiat rails and multiple crypto networks, so you can fund
+                                        the same account from the channel that fits your workflow.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span>Do you support worldwide payments?</span>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Yes. The product is positioned around global transfers, card spending, and
+                                        account access across major international corridors.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span>Can I control limits and categories?</span>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Yes. The card experience is built around visibility and control, so spending
+                                        rules can stay aligned with how you actually use it.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span>Is this a bank?</span>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>No. Talaps is presented as a financial technology platform that works with
+                                        regulated partners for accounts, cards, and crypto rails.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span>How do you handle security?</span>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Security is layered into onboarding, transaction review, and card controls so
+                                        users can move quickly without giving up confidence.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer container">
-        <div class="footer-grid-4">
-            <div class="footer-col" style="grid-column: span 1;">
-                <a href="#" class="logo" style="margin-bottom: 24px; display: block;">
-                    <img src="assets/talaps_logo.svg" alt="Talaps Logo" class="logo-img" style="height: 32px;">
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img footer-logo">
                 </a>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">Your entire financial world, unified. The next generation of global payments and crypto exchange.</p>
+                <p>Your entire financial world, unified. Global accounts, cards, and crypto in one polished interface.
+                </p>
             </div>
+
             <div class="footer-col">
-                <h4>PRODUCTS</h4>
-                <a href="#">Account</a>
-                <a href="#">Card</a>
+                <h4>Products</h4>
+                <a href="accounts.html">Account</a>
+                <a href="cards.html">Card</a>
+                <a href="crypto.html">Crypto</a>
                 <a href="#">Pricing</a>
                 <a href="#">FAQ</a>
             </div>
+
             <div class="footer-col">
-                <h4>LEGAL</h4>
-                <a href="#">Terms & Conditions</a>
+                <h4>Legal</h4>
+                <a href="#">Terms &amp; Conditions</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Imprint</a>
             </div>
+
             <div class="footer-col">
-                <h4>APPS</h4>
+                <h4>Apps</h4>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                     class="app-badge" alt="App Store">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                     class="app-badge" alt="Google Play">
             </div>
-            <div class="footer-col">
-                <h4>KEEP IN TOUCH WITH US</h4>
-                <div class="newsletter-box">
-                    <input type="text" placeholder="Email address">
-                    <button>→</button>
-                </div>
-                <div style="display: flex; gap: 10px; margin-top: 16px;">
-                    <input type="checkbox" id="news" style="margin-top: 4px;">
-                    <label for="news" style="font-size: 0.7rem; color: var(--text-muted);">I would like to be informed
-                        about attractive offers and other news by <strong>Mayonto Ltd. & Co. KG</strong>. This consent
-                        can be withdrawn at any time. More information can be found in the <a href="#"
-                            style="text-decoration: underline; display: inline;">privacy policy</a>.</label>
-                </div>
-            </div>
         </div>
 
-        <div class="fine-print">
-            <p>© 2026 Granite Peak Global Inc. – Talaps is the trade-name of Granite Peak Global Inc.</p>
-            <p style="margin-top: 12px;">Granite Peak Global Inc. is a financial technology company, not a bank. Virtual
-                accounts, payment cards, custody, and on/off ramp services are provided by licensed partners.
-                Availability of services may vary by jurisdiction and is subject to regulatory approval.</p>
-            <p style="margin-top: 12px;">Granite Peak Global Inc. (Registration No.: D1563390) is a company incorporated
-                in Montana, USA and is registered and regulated by Financial Crimes Enforcement Network (FinCEN), as a
-                Money Service Business (MSB) under the Registration No.: 31000309483276</p>
+        <div class="container fine-print">
+            <p>&copy; 2026 Granite Peak Global Inc. Talaps is the trade name of Granite Peak Global Inc.</p>
+            <p>Granite Peak Global Inc. is a financial technology company, not a bank. Virtual accounts, payment
+                cards, custody, and on-ramp or off-ramp services are provided by licensed partners where available.</p>
+            <p>Availability varies by jurisdiction and remains subject to regulatory approval and partner support.</p>
         </div>
     </footer>
 </body>

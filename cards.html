@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talaps Cards | Your Cards For Crypto Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo" aria-label="Talaps home">
+                <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img">
+            </a>
+
+            <div class="segment-menu" data-segment-menu>
+                <div class="toggle-pill" aria-label="Product type">
+                    <button type="button" class="toggle-btn active" data-type="personal" data-segment-panel="personal">Personal</button>
+                    <button type="button" class="toggle-btn" data-type="business" data-segment-panel="business">Business</button>
+                </div>
+
+                <div class="segment-submenu active" data-segment-submenu="personal" aria-label="Personal product categories">
+                    <a href="accounts.html" class="submenu-link">Accounts</a>
+                    <a href="cards.html" class="submenu-link">Cards</a>
+                    <a href="crypto.html" class="submenu-link">Crypto</a>
+                </div>
+
+                <div class="segment-submenu" data-segment-submenu="business" aria-label="Business product categories">
+                    <a href="business.html#business-accounts" class="submenu-link">Accounts</a>
+                    <a href="business.html#business-cards" class="submenu-link">Cards</a>
+                    <a href="business.html#business-crypto" class="submenu-link">Crypto</a>
+                </div>
+            </div>
+
+            <div class="nav-auth" aria-label="Account access">
+                <button type="button" class="btn btn-secondary nav-auth-btn" data-auth-open="login">Log in</button>
+                <button type="button" class="btn btn-primary nav-auth-btn nav-auth-btn-primary"
+                    data-auth-open="register">Get Talaps</button>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="auth-modal" data-auth-modal hidden>
+        <div class="auth-modal-backdrop" data-auth-close></div>
+        <div class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+            <button type="button" class="auth-close" data-auth-close aria-label="Close account dialog">&times;</button>
+
+            <div class="auth-brand-row">
+                <span class="auth-brand-mark" aria-hidden="true">
+                    <img src="assets/talaps_mark.svg" alt="" class="auth-brand-mark-img">
+                </span>
+                <div class="auth-brand-copy">
+                    <h2 id="auth-title" data-auth-title>Welcome back to Talaps</h2>
+                    <p class="auth-brand-text" data-auth-subtitle>Sign in to your account</p>
+                </div>
+            </div>
+
+            <form class="auth-form" data-auth-form novalidate>
+                <label class="auth-field" data-auth-name-field hidden>
+                    <span>Full name</span>
+                    <input type="text" name="full_name" placeholder="Your name" autocomplete="name">
+                </label>
+
+                <label class="auth-field">
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="Email" autocomplete="email">
+                </label>
+
+                <label class="auth-field">
+                    <span>Password</span>
+                    <input type="password" name="password" placeholder="Password" autocomplete="current-password">
+                </label>
+
+                <label class="auth-field" data-auth-confirm-field hidden>
+                    <span>Confirm password</span>
+                    <input type="password" name="confirm_password" placeholder="Confirm password"
+                        autocomplete="new-password">
+                </label>
+
+                <button type="submit" class="auth-submit" data-auth-submit>Continue</button>
+            </form>
+
+            <div class="auth-meta" data-auth-login-meta>
+                <a href="#" class="auth-link">Forgot password?</a>
+            </div>
+
+            <p class="auth-switch-row" data-auth-login-switch>
+                Don't have an account?
+                <button type="button" class="auth-switch-link" data-auth-switch="register">Register</button>
+            </p>
+
+            <p class="auth-switch-row" data-auth-register-switch hidden>
+                Already have an account?
+                <button type="button" class="auth-switch-link" data-auth-switch="login">Log in</button>
+            </p>
+        </div>
+    </div>
+
+    <main class="cardsref-page">
+        <div class="cardsref-shell">
+            <section class="cardsref-panel cardsref-panel-dark cardsref-hero reveal">
+                <h1 class="cardsref-title">YOUR CARDS FOR CRYPTO LIFE</h1>
+                <p class="cardsref-subtitle">Spend Stablecoin and Crypto wherever VISA are accepted - in-store and online.</p>
+                <img src="assets/sss.png" alt="Talaps card stack on mobile" class="cardsref-hero-image">
+                <a href="#" class="btn btn-primary cardsref-cta">Get my Card</a>
+            </section>
+
+            <section class="cardsref-panel cardsref-panel-light reveal">
+                <div class="cardsref-daily">
+                    <div class="cardsref-daily-copy">
+                        <h2>YOUR INDISPENSABLE<br>DAILY TOOL</h2>
+                        <p>Pay with your card everywhere, contactless and safe.</p>
+
+                        <div class="cardsref-mini-grid">
+                            <div class="cardsref-mini-card">
+                                <span class="cardsref-mini-icon">S</span>
+                                <span>Top up with crypto, spend in fiat.</span>
+                            </div>
+                            <div class="cardsref-mini-card">
+                                <span class="cardsref-mini-icon">W</span>
+                                <span>Welcome and accepted worldwide.</span>
+                            </div>
+                            <div class="cardsref-mini-card">
+                                <span class="cardsref-mini-icon">B</span>
+                                <span>Bank grade security and encrypted.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardsref-daily-visual">
+                        <img src="assets/talaps124.png" alt="Talaps card used for in-store payments">
+                    </div>
+                </div>
+            </section>
+
+            <section class="cardsref-panel cardsref-panel-dark reveal">
+                <div class="cardsref-crypto">
+                    <div class="cardsref-crypto-visual">
+                        <img src="assets/talaps502.jpg" alt="Talaps pay with crypto payment success flow"
+                            class="cardsref-crypto-image">
+                    </div>
+
+                    <div class="cardsref-crypto-copy">
+                        <h2>PAY WITH CRYPTO</h2>
+                        <p>Spend Stablecoin and other crypto wherever VISA is accepted - in-store, online, and withdraw at ATMs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cardsref-panel cardsref-panel-light reveal">
+                <div class="cardsref-types">
+                    <article class="cardsref-type">
+                        <div class="cardsref-card cardsref-card-light">
+                            <img src="assets/talaps_mark.svg" alt="" class="cardsref-card-logo">
+                            <span class="cardsref-card-brand">Talaps</span>
+                            <span class="cardsref-card-kind">VIRTUAL</span>
+                            <span class="cardsref-card-visa">VISA</span>
+                        </div>
+
+                        <ul class="cardsref-checks">
+                            <li>Instant issuance</li>
+                            <li>Online payments</li>
+                        </ul>
+                    </article>
+
+                    <article class="cardsref-type">
+                        <div class="cardsref-card cardsref-card-teal">
+                            <img src="assets/talaps_mark.svg" alt="" class="cardsref-card-logo">
+                            <span class="cardsref-card-brand">Talaps</span>
+                            <span class="cardsref-chip" aria-hidden="true"></span>
+                            <span class="cardsref-contactless" aria-hidden="true">)))</span>
+                            <span class="cardsref-card-visa">VISA</span>
+                        </div>
+
+                        <ul class="cardsref-checks">
+                            <li>Online &amp; POS payments</li>
+                            <li>ATM withdrawals</li>
+                            <li>Contactless payments</li>
+                            <li>With chip and magnetic strip</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="cardsref-panel cardsref-panel-dark cardsref-faq reveal">
+                <h2>FAQ</h2>
+                <p>Get answers to common questions about our virtual account solutions</p>
+
+                <div class="cardsref-faq-list">
+                    <div class="cardsref-faq-row"><span>What kind of cards do I get?</span><span>+</span></div>
+                    <div class="cardsref-faq-row"><span>Are there any setup or monthly fees?</span><span>+</span></div>
+                    <div class="cardsref-faq-row"><span>How fast will I receive my payments?</span><span>+</span></div>
+                    <div class="cardsref-faq-row"><span>Who provides and regulates these accounts?</span><span>+</span></div>
+                    <div class="cardsref-faq-row"><span>How can I link my Virtual Account to platforms like PayPal, Payoneer, Airbnb, and others?</span><span>+</span></div>
+                    <div class="cardsref-faq-row"><span>What platforms can I link to my Virtual Account?</span><span>+</span></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img footer-logo">
+                </a>
+                <p>Cards, accounts, and crypto spending tools designed to work together in one clear Talaps experience.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="accounts.html">Accounts</a>
+                <a href="cards.html">Cards</a>
+                <a href="crypto.html">Crypto</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#" data-auth-open="login">Log in</a>
+                <a href="#">Support</a>
+                <a href="#">Privacy</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="#">Virtual cards</a>
+                <a href="#">Physical cards</a>
+                <a href="#">Worldwide spending</a>
+            </div>
+        </div>
+
+        <div class="container fine-print">
+            <p>&copy; 2026 Talaps. Product visuals shown for presentation purposes.</p>
+            <p>Availability varies by jurisdiction and remains subject to regulatory approval and partner support.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

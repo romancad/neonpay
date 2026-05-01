@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talaps Business | Global Finance Infrastructure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo" aria-label="Talaps home">
+                <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img">
+            </a>
+
+            <div class="segment-menu" data-segment-menu>
+                <div class="toggle-pill" aria-label="Product type">
+                    <button type="button" class="toggle-btn" data-type="personal" data-segment-panel="personal">Personal</button>
+                    <button type="button" class="toggle-btn active" data-type="business" data-segment-panel="business">Business</button>
+                </div>
+
+                <div class="segment-submenu" data-segment-submenu="personal" aria-label="Personal product categories">
+                    <a href="accounts.html" class="submenu-link">Accounts</a>
+                    <a href="cards.html" class="submenu-link">Cards</a>
+                    <a href="crypto.html" class="submenu-link">Crypto</a>
+                </div>
+
+                <div class="segment-submenu active" data-segment-submenu="business" aria-label="Business product categories">
+                    <a href="#business-accounts" class="submenu-link">Accounts</a>
+                    <a href="#business-cards" class="submenu-link">Cards</a>
+                    <a href="#business-crypto" class="submenu-link">Crypto</a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#" class="nav-link">Log in</a>
+                <a href="#" class="btn btn-primary">Get Talaps</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="products-main">
+        <section class="hero section">
+            <div class="container hero-container">
+                <div class="hero-copy reveal">
+                    <h1 class="section-title text-gradient hero-title">
+                        <span class="hero-title-line">Business banking for</span>
+                        <span class="hero-title-line">global teams.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Move money across markets, manage spend, and run treasury from one modern dashboard designed
+                        for operators.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Open Business Account</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal" data-reveal="right">
+                    <div class="media-shell media-shell-hero">
+                        <img src="assets/talaps11_hero.png" alt="Talaps business dashboard" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container product-grid">
+                <article class="product-card reveal" id="business-accounts">
+                    <h2 class="product-title">Multi-Currency Accounts</h2>
+                    <p class="product-desc">Hold and settle in major currencies with local rails for payroll,
+                        suppliers, and marketplace payouts.</p>
+                    <ul class="product-list">
+                        <li>Dedicated balances for USD, EUR, GBP, MXN, and BRL</li>
+                        <li>Local and international transfer workflows</li>
+                        <li>Clear transaction history for finance teams</li>
+                    </ul>
+                </article>
+
+                <article class="product-card reveal" id="business-cards">
+                    <h2 class="product-title">Team Spend Controls</h2>
+                    <p class="product-desc">Issue cards, set limits, and keep company spend aligned with policy in
+                        real time.</p>
+                    <ul class="product-list">
+                        <li>Virtual and physical cards for departments</li>
+                        <li>Category and limit controls by role</li>
+                        <li>Simple approval and spend visibility</li>
+                    </ul>
+                </article>
+
+                <article class="product-card reveal" id="business-crypto">
+                    <h2 class="product-title">Crypto Treasury Rails</h2>
+                    <p class="product-desc">Fund operations with crypto or fiat and manage treasury movement from one
+                        interface.</p>
+                    <ul class="product-list">
+                        <li>Deposit and withdraw via major networks</li>
+                        <li>Faster settlement across geographies</li>
+                        <li>Unified reporting for treasury operations</li>
+                    </ul>
+                </article>
+
+                <article class="product-card reveal">
+                    <h2 class="product-title">Operations Visibility</h2>
+                    <p class="product-desc">Get a clean, centralized view of balances, outflows, and payment activity
+                        across the business.</p>
+                    <ul class="product-list">
+                        <li>Consolidated dashboard for finance leads</li>
+                        <li>Real-time monitoring of money movement</li>
+                        <li>Built for high-volume operational workflows</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

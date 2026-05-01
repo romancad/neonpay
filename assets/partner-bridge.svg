@@ -1,0 +1,17 @@
+<svg width="148" height="40" viewBox="0 0 148 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(4 2)" fill="#101215">
+    <circle cx="18" cy="7.2" r="2.15"/>
+    <circle cx="24.7" cy="9" r="2.15"/>
+    <circle cx="29.8" cy="14.1" r="2.15"/>
+    <circle cx="31.6" cy="20.8" r="2.15"/>
+    <circle cx="29.8" cy="27.5" r="2.15"/>
+    <circle cx="24.7" cy="32.6" r="2.15"/>
+    <circle cx="18" cy="34.4" r="2.15"/>
+    <circle cx="11.3" cy="32.6" r="2.15"/>
+    <circle cx="6.2" cy="27.5" r="2.15"/>
+    <circle cx="4.4" cy="20.8" r="2.15"/>
+    <circle cx="6.2" cy="14.1" r="2.15"/>
+    <circle cx="11.3" cy="9" r="2.15"/>
+  </g>
+  <text x="46" y="26.5" fill="#101215" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="-0.7">Bridge</text>
+</svg>

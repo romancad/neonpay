@@ -1,0 +1,10 @@
+<svg width="138" height="34" viewBox="0 0 138 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#6A6CFF" stroke-width="3" stroke-linecap="round">
+    <path d="M18 5V29"/>
+    <path d="M6 17H30"/>
+    <path d="M10 9L26 25"/>
+    <path d="M10 25L26 9"/>
+  </g>
+  <rect x="6.5" y="29.2" width="23" height="3" rx="1.5" fill="#6A6CFF"/>
+  <text x="42" y="24.5" fill="#101215" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="-0.7">persona</text>
+</svg>
