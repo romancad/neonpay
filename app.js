@@ -39,11 +39,30 @@ document.addEventListener("DOMContentLoaded", () => {
             const defaultPanel = menu.dataset.defaultPanel;
             menu.classList.remove("open");
 
+            const currentPageLink = menu.querySelector(".toggle-link[aria-current='page']");
+
             if (!defaultPanel) {
+                const toggleButtons = menu.querySelectorAll(".toggle-btn[data-segment-panel]");
+                const submenus = menu.querySelectorAll(".segment-submenu");
+
+                toggleButtons.forEach((button) => {
+                    button.classList.remove("active");
+                });
+
+                submenus.forEach((submenu) => {
+                    submenu.classList.remove("active");
+                });
+
+                if (currentPageLink) {
+                    currentPageLink.classList.add("active");
+                }
+
+                menu.dataset.activePanel = "";
+                menuCloseTimers.delete(menu);
                 return;
             }
 
-            const toggleButtons = menu.querySelectorAll(".toggle-btn");
+            const toggleButtons = menu.querySelectorAll(".toggle-btn[data-segment-panel]");
             const submenus = menu.querySelectorAll(".segment-submenu");
 
             toggleButtons.forEach((button) => {
@@ -68,12 +87,13 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     segmentMenus.forEach((menu) => {
-        const toggleButtons = menu.querySelectorAll(".toggle-btn");
+        const toggleButtons = menu.querySelectorAll(".toggle-btn[data-segment-panel]");
         const submenus = menu.querySelectorAll(".segment-submenu");
         const submenuLinks = menu.querySelectorAll(".submenu-link");
+        const currentPageLink = menu.querySelector(".toggle-link[aria-current='page']");
         const supportsHover = window.matchMedia("(hover: hover)").matches;
-        const defaultActiveButton = menu.querySelector(".toggle-btn.active") || toggleButtons[0];
-        const defaultPanel = defaultActiveButton?.dataset.segmentPanel || "";
+        const defaultActiveButton = menu.querySelector(".toggle-btn[data-segment-panel].active") || menu.querySelector(".toggle-btn[data-segment-panel]");
+        const defaultPanel = menu.dataset.defaultPanel !== undefined ? menu.dataset.defaultPanel : (defaultActiveButton?.dataset.segmentPanel || "");
 
         menu.dataset.defaultPanel = defaultPanel;
         menu.dataset.activePanel = defaultPanel;
@@ -81,6 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const setActivePanel = (panelName) => {
             if (!panelName) {
                 return;
+            }
+
+            if (currentPageLink) {
+                currentPageLink.classList.remove("active");
             }
 
             toggleButtons.forEach((button) => {
@@ -94,7 +118,17 @@ document.addEventListener("DOMContentLoaded", () => {
             menu.dataset.activePanel = panelName;
         };
 
-        setActivePanel(defaultPanel);
+        if (defaultPanel) {
+            setActivePanel(defaultPanel);
+        } else {
+            if (currentPageLink) {
+                currentPageLink.classList.add("active");
+            }
+
+            submenus.forEach((submenu) => {
+                submenu.classList.remove("active");
+            });
+        }
 
         menu.addEventListener("mouseenter", () => {
             if (supportsHover) {
@@ -104,6 +138,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         toggleButtons.forEach((button) => {
             const panelName = button.dataset.segmentPanel;
+            if (!panelName || button.disabled || button.getAttribute("aria-disabled") === "true") {
+                return;
+            }
 
             if (supportsHover) {
                 button.addEventListener("mouseenter", () => {
@@ -162,7 +199,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const faqItems = document.querySelectorAll(".faq-item");
+    const syncFaqSymbol = (entry) => {
+        const symbol = entry.querySelector(".faq-symbol");
+        if (!symbol) {
+            return;
+        }
+
+        symbol.textContent = entry.classList.contains("active") ? "−" : "+";
+    };
+
     faqItems.forEach((item) => {
+        syncFaqSymbol(item);
+
         const trigger = item.querySelector(".faq-trigger");
         trigger.addEventListener("click", () => {
             const shouldOpen = !item.classList.contains("active");
@@ -170,11 +218,13 @@ document.addEventListener("DOMContentLoaded", () => {
             faqItems.forEach((entry) => {
                 entry.classList.remove("active");
                 entry.querySelector(".faq-trigger").setAttribute("aria-expanded", "false");
+                syncFaqSymbol(entry);
             });
 
             if (shouldOpen) {
                 item.classList.add("active");
                 trigger.setAttribute("aria-expanded", "true");
+                syncFaqSymbol(item);
             }
         });
     });

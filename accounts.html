@@ -21,10 +21,10 @@
                 <img src="assets/talaps555_clean_edgepeeled.png" alt="Talaps" class="logo-img">
             </a>
 
-            <div class="segment-menu" data-segment-menu>
+            <div class="segment-menu" data-segment-menu data-default-panel="personal">
                 <div class="toggle-pill" aria-label="Product type">
                     <button type="button" class="toggle-btn active" data-type="personal" data-segment-panel="personal">Personal</button>
-                    <button type="button" class="toggle-btn" data-type="business" data-segment-panel="business">Business</button>
+                    <a href="business.html" class="toggle-btn toggle-link">Business</a>
                 </div>
 
                 <div class="segment-submenu active" data-segment-submenu="personal" aria-label="Personal product categories">
@@ -33,17 +33,11 @@
                     <a href="crypto.html" class="submenu-link">Crypto</a>
                 </div>
 
-                <div class="segment-submenu" data-segment-submenu="business" aria-label="Business product categories">
-                    <a href="business.html#business-accounts" class="submenu-link">Accounts</a>
-                    <a href="business.html#business-cards" class="submenu-link">Cards</a>
-                    <a href="business.html#business-crypto" class="submenu-link">Crypto</a>
-                </div>
             </div>
 
-            <div class="nav-auth" aria-label="Account access">
-                <button type="button" class="btn btn-secondary nav-auth-btn" data-auth-open="login">Log in</button>
-                <button type="button" class="btn btn-primary nav-auth-btn nav-auth-btn-primary"
-                    data-auth-open="register">Sign up</button>
+            <div class="nav-actions" aria-label="Account access">
+                <a href="#" class="nav-link" data-auth-open="login">Log in</a>
+                <a href="#" class="btn btn-primary" data-auth-open="register">Get Talaps</a>
             </div>
         </div>
     </nav>
@@ -108,13 +102,19 @@
         <section class="accounts-hero">
             <div class="accounts-shell accounts-hero-grid">
                 <div class="accounts-hero-copy reveal">
-                    <h1 class="accounts-hero-title">VIRTUAL ACCOUNT<br>IN LOCAL CURRENCY</h1>
-                    <p class="accounts-hero-subtitle">The easiest way to receive and send money in your local currency.</p>
-                    <button type="button" class="btn btn-primary accounts-hero-cta" data-auth-open="register">Open Your Account</button>
+                    <h1 class="section-title text-gradient hero-title accounts-hero-title">
+                        <span class="hero-title-line">Virtual account</span>
+                        <span class="hero-title-line">in local</span>
+                        <span class="hero-title-line">currency.</span>
+                    </h1>
+                    <p class="hero-subtitle accounts-hero-subtitle">The easiest way to receive and send money in your local currency.</p>
+                    <div class="hero-actions accounts-hero-actions">
+                        <button type="button" class="btn btn-primary accounts-hero-cta" data-auth-open="register">Open Your Account</button>
+                    </div>
                 </div>
 
                 <div class="accounts-hero-visual reveal" data-reveal="right">
-                    <img src="assets/talaps500.jpg" alt="Talaps dashboard shown on laptop and phone"
+                    <img src="assets/talaps503_clean.jpg" alt="Talaps dashboard shown on laptop and phone"
                         class="accounts-hero-composite">
                 </div>
             </div>
@@ -175,7 +175,7 @@
             <div class="accounts-shell accounts-apply-grid">
                 <div class="accounts-apply-visual reveal" data-reveal="left">
                     <div class="accounts-apply-frame">
-                        <img src="assets/talaps501.jpg" alt="Talaps virtual account interface with country flags"
+                        <img src="assets/talaps504_clean.jpg" alt="Talaps virtual account interface with country flags"
                             class="accounts-apply-image">
                     </div>
                 </div>
